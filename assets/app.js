@@ -30,7 +30,6 @@ $(".searchButtons").on("click", "button.animal", function() {
 	  url: url,
 	  method: 'GET',
 	}).done(function(response) {
-	  console.log(response);
 	  var results = response.data;
 	  displayResults(results);
 	  gifClicks(results);
