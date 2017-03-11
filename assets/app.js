@@ -33,10 +33,25 @@ $(".searchButtons").on("click", "button.animal", function() {
 	  console.log(response);
 	  var results = response.data;
 	  displayResults(results);
+	 // gifClicks(results);
 	}).fail(function(err) {
 	  throw err;
 	});
 });
+
+//click gif behavior
+// function gifClicks(results){
+// 	$('.searchResults').on('click', '.animalItem', function(results){
+// 		var imgSrc = $(this).find('img').attr('src');
+
+// 		if (imgSrc = results[i].original_still.url){
+
+// 		} else if (imgSrc = results[i].images.fixed_height.url) {
+
+// 		}
+		
+// 	});
+// }
 
 function displayResults(results){
 	for (var i = 0; i < results.length; i++) {
@@ -47,7 +62,7 @@ function displayResults(results){
 	    var p = $("<p>").text("Rating: " + rating);
 
 	    var animalImage = $("<img>");
-	    animalImage.attr("src", results[i].images.fixed_height.url);
+	    animalImage.attr("src", results[i].images.original_still.url);
 
 	    gifDiv.append(p).append(animalImage);
 
