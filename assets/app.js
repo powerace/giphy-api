@@ -47,9 +47,8 @@ function gifClicks(results){
 		var still = results[gifNum].images.original_still.url;
 		var gif = results[gifNum].images.fixed_height.url;
 
-		console.log("imgSrc " + imgSrc, "still " + still, "gif " + gif);
 
-		if (imgSrc == still){
+		if (imgSrc === still){
 			$(this).attr('src', gif);
 		} else {
 			$(this).attr('src', still);

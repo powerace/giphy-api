@@ -1,5 +1,5 @@
 .animalItem {
-	float: left;
+	display:inline-block;
 	margin-right: 15px;
 	margin-bottom: 30px;
 	max-width: 300px;
