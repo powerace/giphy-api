@@ -33,25 +33,31 @@ $(".searchButtons").on("click", "button.animal", function() {
 	  console.log(response);
 	  var results = response.data;
 	  displayResults(results);
-	 // gifClicks(results);
+	  gifClicks(results);
 	}).fail(function(err) {
 	  throw err;
 	});
 });
 
 //click gif behavior
-// function gifClicks(results){
-// 	$('.searchResults').on('click', '.animalItem', function(results){
-// 		var imgSrc = $(this).find('img').attr('src');
+function gifClicks(results){
+	$('.searchResults').on('click', '.animalItem', function(){
+		var imgSrc = $(this).find('img').attr('src');
+		var gifNum = $(this).attr('data-number');
+		var still = results[gifNum].images.original_still.url;
+		var gif = results[gifNum].images.fixed_height.url;
 
-// 		if (imgSrc = results[i].original_still.url){
+		console.log(results[gifNum]);
 
-// 		} else if (imgSrc = results[i].images.fixed_height.url) {
-
-// 		}
+		if (imgSrc = still){
+			$(this).find('img').attr('src', gif);
+		} else 
+		if (imgSrc != still){
+			$(this).find('img').attr('src', still);
+		}
 		
-// 	});
-// }
+	});
+}
 
 function displayResults(results){
 	for (var i = 0; i < results.length; i++) {
@@ -67,7 +73,9 @@ function displayResults(results){
 	    gifDiv.append(p).append(animalImage);
 
 	    $(".searchResults").append(gifDiv);
-	  }
+
+	    gifDiv.attr('data-number', i);
+	}
 }
 
 function buildButton(name){
