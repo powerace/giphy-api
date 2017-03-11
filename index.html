@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- If IE use the latest rendering engine -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		 
+		<!-- Set the page to the width of the device and set the zoon level -->
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+		<title>Animal Search</title>
+
+		<!-- Link to bootstrap -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<!-- Header row -->
+			<div class="row">
+				<h1> Animal Search </h1>
+			</div>
+			
+			<!-- Search Buttons row -->
+			<div class="row">
+				<div class="searchButtons col-md-12">
+					
+				</div>
+			</div>
+
+			<!-- Add button form -->
+			<div class="row">
+				<div col-md-12">
+					<form role = "form" class="searchForm">
+						<div class = "form-group">
+					      <label for = "name">Add an animal</label>
+					      <input type = "text" class = "form-control" id = "name">
+					   	</div>
+	   					<button type = "submit" class = "submit btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+			
+
+			<!-- Search results row -->
+			<div class="row">
+				<div col-md-12">
+					<h2>Results</h2>
+					<div class="searchResults"></div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- Link to JQuery and javascript file-->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+		<script src="assets/app.js"></script>
+
+	</body>
+
 </html>

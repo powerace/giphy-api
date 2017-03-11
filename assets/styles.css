@@ -1,0 +1,13 @@
+.animalItem {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 30px;
+}
+
+.btn-primary {
+	margin-right: 15px;
+}
+
+.searchForm {
+	padding: 15px;
+}
